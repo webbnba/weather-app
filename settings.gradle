@@ -1,0 +1,3 @@
+rootProject.name = 'weather-app'
+include 'openWeather'
+include 'weatherBot'
