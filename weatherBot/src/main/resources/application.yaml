@@ -1,0 +1,21 @@
+server:
+  port: 8086
+
+bot:
+  token: ${BOT_TOKEN}
+
+open-weather-client:
+  url: "http://open-weather:8085/api/v1/weatherData/%s"
+
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  datasource:
+    url: jdbc:postgresql://${HOST}/${POSTGRES_DB}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+  liquibase:
+    enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: none

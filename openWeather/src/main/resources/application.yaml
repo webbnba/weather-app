@@ -1,0 +1,17 @@
+server:
+  port: 8085
+
+app:
+  cache:
+    size: 365
+  rest:
+    api:
+      prefix: /api
+
+spring:
+  config:
+    import: optional:file:.env[.properties]
+
+weather-api:
+  key: ${WEATHER_API_KEY}
+  url: https://api.openweathermap.org/data/2.5/weather?q=%s&units=metric
